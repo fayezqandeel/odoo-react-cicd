@@ -1,0 +1,988 @@
+2020-01-28 21:00:17,952 1 INFO ? odoo: Odoo version 12.0-20191106 
+2020-01-28 21:00:17,954 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2020-01-28 21:00:17,959 1 INFO ? odoo: addons paths: ['/var/lib/odoo/addons/12.0', '/mnt/extra-addons', '/usr/lib/python3/dist-packages/odoo/addons'] 
+2020-01-28 21:00:17,961 1 INFO ? odoo: database: odoo@db:5432 
+2020-01-28 21:00:18,156 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2020-01-28 21:00:18,356 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 6093de658bfc:8069 
+2020-01-28 21:00:24,924 1 INFO ? odoo.http: HTTP Configuring static files 
+2020-01-28 21:00:24,996 1 INFO app odoo.modules.loading: loading 1 modules... 
+2020-01-28 21:00:25,023 1 INFO app odoo.modules.loading: 1 modules loaded in 0.03s, 0 queries 
+2020-01-28 21:00:25,126 1 INFO app odoo.modules.loading: loading 31 modules... 
+2020-01-28 21:00:25,749 1 INFO app odoo.modules.loading: 31 modules loaded in 0.62s, 0 queries 
+2020-01-28 21:00:26,372 1 INFO app odoo.modules.loading: Modules loaded. 
+2020-01-28 21:00:26,388 1 INFO app odoo.addons.base.models.ir_http: Generating routing map 
+2020-01-28 21:00:26,729 1 INFO app werkzeug: 192.168.80.4 - - [28/Jan/2020 21:00:26] "GET /web?debug HTTP/1.1" 303 - 12 0.022 1.775
+2020-01-28 21:00:28,029 1 INFO app werkzeug: 192.168.80.4 - - [28/Jan/2020 21:00:28] "GET /web/login HTTP/1.1" 200 - 335 0.399 0.890
+2020-01-28 21:00:28,314 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/5a/5aa9c9736af5bf0d51ec4b0429cc8bae25050d25 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 340
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(340,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/5a/5aa9c9736af5bf0d51ec4b0429cc8bae25050d25'
+2020-01-28 21:00:28,374 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/0e/0e3bd423846d63e2dea490efa0dc403bcea8ea85 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 371
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(371,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/0e/0e3bd423846d63e2dea490efa0dc403bcea8ea85'
+2020-01-28 21:00:28,376 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/6e/6e18146dd9891068b546aefc95cb52ecc957dee1 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 373
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(373,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/6e/6e18146dd9891068b546aefc95cb52ecc957dee1'
+2020-01-28 21:00:28,378 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/99/993f60dd3fae4bc27132ebb275804d57a09afa1a 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 372
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(372,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/99/993f60dd3fae4bc27132ebb275804d57a09afa1a'
+2020-01-28 21:00:28,412 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/6d/6df47c607f75babd0c81e011557de40ea1000230 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 352
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(352,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/6d/6df47c607f75babd0c81e011557de40ea1000230'
+2020-01-28 21:00:28,426 1 INFO app werkzeug: 192.168.80.4 - - [28/Jan/2020 21:00:28] "GET /web/content/371-2791803/1/web.assets_frontend.0.css HTTP/1.1" 200 - 5 0.015 0.253
+2020-01-28 21:00:28,428 1 INFO app werkzeug: 192.168.80.4 - - [28/Jan/2020 21:00:28] "GET /web/content/373-2791803/1/web.assets_frontend.js HTTP/1.1" 200 - 5 0.016 0.250
+2020-01-28 21:00:28,429 1 INFO app werkzeug: 192.168.80.4 - - [28/Jan/2020 21:00:28] "GET /web/content/340-15f025e/1/web.assets_common.0.css HTTP/1.1" 200 - 8 0.137 0.158
+2020-01-28 21:00:28,431 1 INFO app werkzeug: 192.168.80.4 - - [28/Jan/2020 21:00:28] "GET /web/content/372-2791803/1/web.assets_frontend.1.css HTTP/1.1" 200 - 5 0.106 0.174
+2020-01-28 21:00:28,438 1 INFO app werkzeug: 192.168.80.4 - - [28/Jan/2020 21:00:28] "GET /web/content/352-15f025e/1/web.assets_common.js HTTP/1.1" 200 - 5 0.026 0.186
+2020-01-28 21:00:28,538 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/d5/d5cce68bf4bb4ab57beaf766f3fb775cf8df0c83 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('res.company(1,).logo', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('res.partner(1,).image', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(1,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/d5/d5cce68bf4bb4ab57beaf766f3fb775cf8df0c83'
+2020-01-28 21:00:28,580 1 INFO app werkzeug: 192.168.80.4 - - [28/Jan/2020 21:00:28] "GET /web/image/res.company/1/logo?unique=6808d4d HTTP/1.1" 200 - 20 0.155 0.257
+2020-01-28 21:00:31,805 1 INFO app werkzeug: 192.168.80.4 - - [28/Jan/2020 21:00:31] "GET /web/login HTTP/1.1" 200 - 39 0.038 0.083
+2020-01-28 21:00:31,997 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/5a/5aa9c9736af5bf0d51ec4b0429cc8bae25050d25 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 340
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(340,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/5a/5aa9c9736af5bf0d51ec4b0429cc8bae25050d25'
+2020-01-28 21:00:32,078 1 INFO app werkzeug: 192.168.80.4 - - [28/Jan/2020 21:00:32] "GET /web/content/340-15f025e/1/web.assets_common.0.css HTTP/1.1" 200 - 5 0.008 0.107
+2020-01-28 21:00:32,086 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/99/993f60dd3fae4bc27132ebb275804d57a09afa1a 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 372
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(372,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/99/993f60dd3fae4bc27132ebb275804d57a09afa1a'
+2020-01-28 21:00:32,107 1 INFO app werkzeug: 192.168.80.4 - - [28/Jan/2020 21:00:32] "GET /web/content/372-2791803/1/web.assets_frontend.1.css HTTP/1.1" 200 - 5 0.078 0.068
+2020-01-28 21:00:32,110 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/6e/6e18146dd9891068b546aefc95cb52ecc957dee1 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 373
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(373,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/6e/6e18146dd9891068b546aefc95cb52ecc957dee1'
+2020-01-28 21:00:32,141 1 INFO app werkzeug: 192.168.80.4 - - [28/Jan/2020 21:00:32] "GET /web/content/373-2791803/1/web.assets_frontend.js HTTP/1.1" 200 - 5 0.011 0.131
+2020-01-28 21:00:32,123 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/6d/6df47c607f75babd0c81e011557de40ea1000230 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 352
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(352,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/6d/6df47c607f75babd0c81e011557de40ea1000230'
+2020-01-28 21:00:32,121 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/0e/0e3bd423846d63e2dea490efa0dc403bcea8ea85 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 371
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(371,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/0e/0e3bd423846d63e2dea490efa0dc403bcea8ea85'
+2020-01-28 21:00:32,162 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/d5/d5cce68bf4bb4ab57beaf766f3fb775cf8df0c83 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('res.company(1,).logo', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('res.partner(1,).image', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(1,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/d5/d5cce68bf4bb4ab57beaf766f3fb775cf8df0c83'
+2020-01-28 21:00:32,163 1 INFO app werkzeug: 192.168.80.4 - - [28/Jan/2020 21:00:32] "GET /web/content/352-15f025e/1/web.assets_common.js HTTP/1.1" 200 - 5 0.017 0.156
+2020-01-28 21:00:32,165 1 INFO app werkzeug: 192.168.80.4 - - [28/Jan/2020 21:00:32] "GET /web/content/371-2791803/1/web.assets_frontend.0.css HTTP/1.1" 200 - 5 0.075 0.114
+2020-01-28 21:00:32,175 1 INFO app werkzeug: 192.168.80.4 - - [28/Jan/2020 21:00:32] "GET /web/image/res.company/1/logo?unique=6808d4d HTTP/1.1" 200 - 11 0.060 0.128
+2020-01-28 21:00:34,487 1 INFO app werkzeug: 192.168.80.4 - - [28/Jan/2020 21:00:34] "GET / HTTP/1.1" 200 - 45 0.053 0.081
+2020-01-28 21:00:34,654 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/99/993f60dd3fae4bc27132ebb275804d57a09afa1a 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 372
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(372,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/99/993f60dd3fae4bc27132ebb275804d57a09afa1a'
+2020-01-28 21:00:34,681 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/5a/5aa9c9736af5bf0d51ec4b0429cc8bae25050d25 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 340
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(340,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/5a/5aa9c9736af5bf0d51ec4b0429cc8bae25050d25'
+2020-01-28 21:00:34,764 1 INFO app werkzeug: 192.168.80.4 - - [28/Jan/2020 21:00:34] "GET /web/content/372-2791803/1/web.assets_frontend.1.css HTTP/1.1" 200 - 5 0.012 0.142
+2020-01-28 21:00:34,743 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/6e/6e18146dd9891068b546aefc95cb52ecc957dee1 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 373
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(373,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/6e/6e18146dd9891068b546aefc95cb52ecc957dee1'
+2020-01-28 21:00:34,751 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/0e/0e3bd423846d63e2dea490efa0dc403bcea8ea85 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 371
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(371,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/0e/0e3bd423846d63e2dea490efa0dc403bcea8ea85'
+2020-01-28 21:00:34,795 1 INFO app werkzeug: 192.168.80.4 - - [28/Jan/2020 21:00:34] "GET /web/content/371-2791803/1/web.assets_frontend.0.css HTTP/1.1" 200 - 5 0.123 0.069
+2020-01-28 21:00:34,769 1 INFO app werkzeug: 192.168.80.4 - - [28/Jan/2020 21:00:34] "GET /web/content/340-15f025e/1/web.assets_common.0.css HTTP/1.1" 200 - 5 0.038 0.132
+2020-01-28 21:00:34,790 1 INFO app werkzeug: 192.168.80.4 - - [28/Jan/2020 21:00:34] "GET /web/content/373-2791803/1/web.assets_frontend.js HTTP/1.1" 200 - 5 0.020 0.105
+2020-01-28 21:00:34,706 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/6d/6df47c607f75babd0c81e011557de40ea1000230 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 352
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(352,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/6d/6df47c607f75babd0c81e011557de40ea1000230'
+2020-01-28 21:00:34,850 1 INFO app werkzeug: 192.168.80.4 - - [28/Jan/2020 21:00:34] "GET /web/content/352-15f025e/1/web.assets_common.js HTTP/1.1" 200 - 5 0.040 0.191
+2020-01-28 21:00:34,853 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/d5/d5cce68bf4bb4ab57beaf766f3fb775cf8df0c83 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('res.company(1,).logo', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('res.partner(1,).image', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(1,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/d5/d5cce68bf4bb4ab57beaf766f3fb775cf8df0c83'
+2020-01-28 21:00:34,881 1 INFO app werkzeug: 192.168.80.4 - - [28/Jan/2020 21:00:34] "GET /web/image/res.company/1/logo?unique=6808d4d HTTP/1.1" 200 - 11 0.101 0.112
+2020-01-28 21:02:06,279 1 INFO ? odoo.service.server: Initiating shutdown 
+2020-01-28 21:02:06,320 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2020-01-28 21:02:18,152 1 INFO ? odoo: Odoo version 12.0-20191106 
+2020-01-28 21:02:18,157 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2020-01-28 21:02:18,158 1 INFO ? odoo: addons paths: ['/var/lib/odoo/addons/12.0', '/mnt/addons', '/usr/lib/python3/dist-packages/odoo/addons', '/mnt/extra-addons'] 
+2020-01-28 21:02:18,161 1 INFO ? odoo: database: odoo@db:5432 
+2020-01-28 21:02:18,370 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2020-01-28 21:02:18,551 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 6093de658bfc:8069 
+2020-01-28 21:02:45,932 1 INFO ? werkzeug: 192.168.80.2 - - [28/Jan/2020 21:02:45] "GET / HTTP/1.1" 500 - - - -
+2020-01-28 21:02:45,958 1 ERROR ? werkzeug: Error on request:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/werkzeug/serving.py", line 304, in run_wsgi
+    execute(self.server.app)
+  File "/usr/lib/python3/dist-packages/werkzeug/serving.py", line 292, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 409, in app
+    return self.app(e, s)
+  File "/usr/lib/python3/dist-packages/odoo/service/wsgi_server.py", line 142, in application
+    return application_unproxied(environ, start_response)
+  File "/usr/lib/python3/dist-packages/odoo/service/wsgi_server.py", line 117, in application_unproxied
+    result = odoo.http.root(environ, start_response)
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 1319, in __call__
+    self.load_addons()
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 1328, in load_addons
+    for module in sorted(os.listdir(str(addons_path))):
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/addons' - - -
+2020-01-28 21:02:46,241 1 INFO app odoo.modules.loading: loading 1 modules... 
+2020-01-28 21:02:46,274 1 INFO app odoo.modules.loading: 1 modules loaded in 0.03s, 0 queries 
+2020-01-28 21:02:46,303 1 INFO app odoo.modules.loading: loading 31 modules... 
+2020-01-28 21:02:46,696 1 INFO app odoo.modules.loading: 31 modules loaded in 0.39s, 0 queries 
+2020-01-28 21:02:47,042 1 INFO app odoo.modules.loading: Modules loaded. 
+2020-01-28 21:02:47,051 1 INFO app odoo.addons.base.models.ir_http: Generating routing map 
+2020-01-28 21:02:47,298 1 INFO app werkzeug: 192.168.80.2 - - [28/Jan/2020 21:02:47] "GET /favicon.ico HTTP/1.1" 200 - 28 0.035 1.065
+2020-01-28 21:02:49,214 1 INFO app werkzeug: 192.168.80.2 - - [28/Jan/2020 21:02:49] "GET / HTTP/1.1" 200 - 307 0.311 0.612
+2020-01-28 21:02:49,409 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/5a/5aa9c9736af5bf0d51ec4b0429cc8bae25050d25 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 340
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(340,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/5a/5aa9c9736af5bf0d51ec4b0429cc8bae25050d25'
+2020-01-28 21:02:49,437 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/6d/6df47c607f75babd0c81e011557de40ea1000230 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 352
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(352,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/6d/6df47c607f75babd0c81e011557de40ea1000230'
+2020-01-28 21:02:49,446 1 INFO app werkzeug: 192.168.80.2 - - [28/Jan/2020 21:02:49] "GET /web/content/340-15f025e/1/web.assets_common.0.css HTTP/1.1" 200 - 8 0.014 0.082
+2020-01-28 21:02:49,457 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/6e/6e18146dd9891068b546aefc95cb52ecc957dee1 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 373
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(373,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/6e/6e18146dd9891068b546aefc95cb52ecc957dee1'
+2020-01-28 21:02:49,458 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/99/993f60dd3fae4bc27132ebb275804d57a09afa1a 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 372
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(372,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/99/993f60dd3fae4bc27132ebb275804d57a09afa1a'
+2020-01-28 21:02:49,471 1 INFO app werkzeug: 192.168.80.2 - - [28/Jan/2020 21:02:49] "GET /web/content/352-15f025e/1/web.assets_common.js HTTP/1.1" 200 - 5 0.016 0.095
+2020-01-28 21:02:49,478 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/0e/0e3bd423846d63e2dea490efa0dc403bcea8ea85 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 371
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(371,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/0e/0e3bd423846d63e2dea490efa0dc403bcea8ea85'
+2020-01-28 21:02:49,481 1 INFO app werkzeug: 192.168.80.2 - - [28/Jan/2020 21:02:49] "GET /web/content/373-2791803/1/web.assets_frontend.js HTTP/1.1" 200 - 5 0.024 0.095
+2020-01-28 21:02:49,484 1 INFO app werkzeug: 192.168.80.2 - - [28/Jan/2020 21:02:49] "GET /web/content/372-2791803/1/web.assets_frontend.1.css HTTP/1.1" 200 - 5 0.038 0.101
+2020-01-28 21:02:49,506 1 INFO app werkzeug: 192.168.80.2 - - [28/Jan/2020 21:02:49] "GET /web/content/371-2791803/1/web.assets_frontend.0.css HTTP/1.1" 200 - 5 0.049 0.093
+2020-01-28 21:02:49,580 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/d5/d5cce68bf4bb4ab57beaf766f3fb775cf8df0c83 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('res.company(1,).logo', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('res.partner(1,).image', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(1,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/d5/d5cce68bf4bb4ab57beaf766f3fb775cf8df0c83'
+2020-01-28 21:02:49,591 1 INFO app werkzeug: 192.168.80.2 - - [28/Jan/2020 21:02:49] "GET /web/image/res.company/1/logo?unique=6808d4d HTTP/1.1" 500 - 20 0.073 0.162
+2020-01-28 21:02:49,749 1 ERROR app werkzeug: Error on request:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/werkzeug/serving.py", line 304, in run_wsgi
+    execute(self.server.app)
+  File "/usr/lib/python3/dist-packages/werkzeug/serving.py", line 292, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 409, in app
+    return self.app(e, s)
+  File "/usr/lib/python3/dist-packages/odoo/service/wsgi_server.py", line 142, in application
+    return application_unproxied(environ, start_response)
+  File "/usr/lib/python3/dist-packages/odoo/service/wsgi_server.py", line 117, in application_unproxied
+    result = odoo.http.root(environ, start_response)
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 1320, in __call__
+    return self.dispatch(environ, start_response)
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 1488, in dispatch
+    result = ir_http._dispatch()
+  File "/usr/lib/python3/dist-packages/odoo/addons/auth_signup/models/ir_http.py", line 19, in _dispatch
+    return super(Http, cls)._dispatch()
+  File "/usr/lib/python3/dist-packages/odoo/addons/web_editor/models/ir_http.py", line 22, in _dispatch
+    return super(IrHttp, cls)._dispatch()
+  File "/usr/lib/python3/dist-packages/odoo/addons/http_routing/models/ir_http.py", line 397, in _dispatch
+    result = super(IrHttp, cls)._dispatch()
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_http.py", line 207, in _dispatch
+    return cls._handle_exception(e)
+  File "/usr/lib/python3/dist-packages/odoo/addons/website/models/ir_http.py", line 195, in _handle_exception
+    return super(Http, cls)._handle_exception(exception)
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_http.py", line 177, in _handle_exception
+    return request._handle_exception(exception)
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 776, in _handle_exception
+    return super(HttpRequest, self)._handle_exception(exception)
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 314, in _handle_exception
+    raise pycompat.reraise(type(exception), exception, sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/odoo/tools/pycompat.py", line 87, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_http.py", line 203, in _dispatch
+    result = request.dispatch()
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 835, in dispatch
+    r = self._call_function(**self.params)
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 346, in _call_function
+    return checked_call(self.db, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 97, in wrapper
+    return f(dbname, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 339, in checked_call
+    result = self.endpoint(*a, **kw)
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 941, in __call__
+    return self.method(*args, **kw)
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 519, in response_wrap
+    response = f(*args, **kw)
+  File "/usr/lib/python3/dist-packages/odoo/addons/web/controllers/main.py", line 1092, in content_image
+    content = base64.b64encode(self.placeholder(image='placeholder.png'))
+  File "/usr/lib/python3/dist-packages/odoo/addons/web/controllers/main.py", line 1012, in placeholder
+    addons_path = http.addons_manifest['web']['addons_path']
+KeyError: 'web' - - -
+2020-01-28 21:02:49,761 1 INFO app werkzeug: 192.168.80.2 - - [28/Jan/2020 21:02:49] "GET /web/image/website/1/favicon/ HTTP/1.1" 200 - 5 0.039 0.024
+2020-01-28 21:02:52,188 1 INFO app werkzeug: 192.168.80.2 - - [28/Jan/2020 21:02:52] "GET / HTTP/1.1" 200 - 28 0.039 0.056
+2020-01-28 21:02:52,334 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/5a/5aa9c9736af5bf0d51ec4b0429cc8bae25050d25 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 340
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(340,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/5a/5aa9c9736af5bf0d51ec4b0429cc8bae25050d25'
+2020-01-28 21:02:52,392 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/6e/6e18146dd9891068b546aefc95cb52ecc957dee1 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 373
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(373,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/6e/6e18146dd9891068b546aefc95cb52ecc957dee1'
+2020-01-28 21:02:52,342 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/0e/0e3bd423846d63e2dea490efa0dc403bcea8ea85 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 371
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(371,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/0e/0e3bd423846d63e2dea490efa0dc403bcea8ea85'
+2020-01-28 21:02:52,397 1 INFO app werkzeug: 192.168.80.2 - - [28/Jan/2020 21:02:52] "GET /web/content/340-15f025e/1/web.assets_common.0.css HTTP/1.1" 200 - 5 0.031 0.083
+2020-01-28 21:02:52,398 1 INFO app werkzeug: 192.168.80.2 - - [28/Jan/2020 21:02:52] "GET /web/content/373-2791803/1/web.assets_frontend.js HTTP/1.1" 200 - 5 0.048 0.024
+2020-01-28 21:02:52,400 1 INFO app werkzeug: 192.168.80.2 - - [28/Jan/2020 21:02:52] "GET /web/content/371-2791803/1/web.assets_frontend.0.css HTTP/1.1" 200 - 5 0.028 0.079
+2020-01-28 21:02:52,451 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/6d/6df47c607f75babd0c81e011557de40ea1000230 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 352
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(352,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/6d/6df47c607f75babd0c81e011557de40ea1000230'
+2020-01-28 21:02:52,478 1 INFO app werkzeug: 192.168.80.2 - - [28/Jan/2020 21:02:52] "GET /web/content/352-15f025e/1/web.assets_common.js HTTP/1.1" 200 - 5 0.078 0.081
+2020-01-28 21:02:52,481 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/99/993f60dd3fae4bc27132ebb275804d57a09afa1a 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 372
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(372,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/99/993f60dd3fae4bc27132ebb275804d57a09afa1a'
+2020-01-28 21:02:52,503 1 INFO app werkzeug: 192.168.80.2 - - [28/Jan/2020 21:02:52] "GET /web/content/372-2791803/1/web.assets_frontend.1.css HTTP/1.1" 200 - 5 0.102 0.086
+2020-01-28 21:02:52,500 1 INFO app odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/app/d5/d5cce68bf4bb4ab57beaf766f3fb775cf8df0c83 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('res.company(1,).logo', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('res.partner(1,).image', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1049, in get
+    value = self._data[key][field][record._ids[0]]
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 989, in __get__
+    value = record.env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 1051, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(1,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 113, in _file_read
+    r = base64.b64encode(open(full_path,'rb').read())
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/app/d5/d5cce68bf4bb4ab57beaf766f3fb775cf8df0c83'
+2020-01-28 21:02:52,531 1 INFO app werkzeug: 192.168.80.2 - - [28/Jan/2020 21:02:52] "GET /web/image/res.company/1/logo?unique=6808d4d HTTP/1.1" 500 - 11 0.070 0.117
+2020-01-28 21:02:52,644 1 ERROR app werkzeug: Error on request:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/werkzeug/serving.py", line 304, in run_wsgi
+    execute(self.server.app)
+  File "/usr/lib/python3/dist-packages/werkzeug/serving.py", line 292, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 409, in app
+    return self.app(e, s)
+  File "/usr/lib/python3/dist-packages/odoo/service/wsgi_server.py", line 142, in application
+    return application_unproxied(environ, start_response)
+  File "/usr/lib/python3/dist-packages/odoo/service/wsgi_server.py", line 117, in application_unproxied
+    result = odoo.http.root(environ, start_response)
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 1320, in __call__
+    return self.dispatch(environ, start_response)
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 1488, in dispatch
+    result = ir_http._dispatch()
+  File "/usr/lib/python3/dist-packages/odoo/addons/auth_signup/models/ir_http.py", line 19, in _dispatch
+    return super(Http, cls)._dispatch()
+  File "/usr/lib/python3/dist-packages/odoo/addons/web_editor/models/ir_http.py", line 22, in _dispatch
+    return super(IrHttp, cls)._dispatch()
+  File "/usr/lib/python3/dist-packages/odoo/addons/http_routing/models/ir_http.py", line 397, in _dispatch
+    result = super(IrHttp, cls)._dispatch()
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_http.py", line 207, in _dispatch
+    return cls._handle_exception(e)
+  File "/usr/lib/python3/dist-packages/odoo/addons/website/models/ir_http.py", line 195, in _handle_exception
+    return super(Http, cls)._handle_exception(exception)
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_http.py", line 177, in _handle_exception
+    return request._handle_exception(exception)
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 776, in _handle_exception
+    return super(HttpRequest, self)._handle_exception(exception)
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 314, in _handle_exception
+    raise pycompat.reraise(type(exception), exception, sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/odoo/tools/pycompat.py", line 87, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_http.py", line 203, in _dispatch
+    result = request.dispatch()
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 835, in dispatch
+    r = self._call_function(**self.params)
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 346, in _call_function
+    return checked_call(self.db, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/odoo/service/model.py", line 97, in wrapper
+    return f(dbname, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 339, in checked_call
+    result = self.endpoint(*a, **kw)
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 941, in __call__
+    return self.method(*args, **kw)
+  File "/usr/lib/python3/dist-packages/odoo/http.py", line 519, in response_wrap
+    response = f(*args, **kw)
+  File "/usr/lib/python3/dist-packages/odoo/addons/web/controllers/main.py", line 1092, in content_image
+    content = base64.b64encode(self.placeholder(image='placeholder.png'))
+  File "/usr/lib/python3/dist-packages/odoo/addons/web/controllers/main.py", line 1012, in placeholder
+    addons_path = http.addons_manifest['web']['addons_path']
+KeyError: 'web' - - -
+2020-01-28 21:02:52,651 1 INFO app werkzeug: 192.168.80.2 - - [28/Jan/2020 21:02:52] "GET /web/image/website/1/favicon/ HTTP/1.1" 200 - 5 0.009 0.030
+2020-01-28 21:07:30,135 1 INFO ? odoo.service.server: Initiating shutdown 
+2020-01-28 21:07:30,139 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2020-01-28 21:07:45,619 1 INFO ? odoo: Odoo version 12.0-20191106 
+2020-01-28 21:07:45,623 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2020-01-28 21:07:45,624 1 INFO ? odoo: addons paths: ['/var/lib/odoo/addons/12.0', '/mnt/extra-addons', '/usr/lib/python3/dist-packages/odoo/addons'] 
+2020-01-28 21:07:45,626 1 INFO ? odoo: database: odoo@db:5432 
+2020-01-28 21:07:45,808 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2020-01-28 21:07:46,201 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 6093de658bfc:8069 

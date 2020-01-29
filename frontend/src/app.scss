@@ -1,0 +1,188 @@
+body {
+    background: #fff;
+}
+.clear {
+    clear: both;
+}
+.wrapper {
+    margin: 0px 1%;
+}
+.ant-modal-content {
+    border-radius: 0px;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.2);
+    .ant-form-vertical .ant-form-item {
+        padding-bottom: 0px;
+    }
+    .ant-form-item {
+        margin-bottom: 4px !important;
+    }
+    .ant-divider-inner-text {
+        color: #ccc;
+    }
+    .ant-divider-horizontal.ant-divider-with-text-left::before{
+        width: 0%;
+    }
+}
+.ant-modal-header {
+    border-radius: 0px 0px 0px 0px;
+    background: #000;
+    border-bottom: none;
+    .ant-modal-title {
+        color: #fff;
+    }
+}
+.ant-divider-horizontal.ant-divider-with-text-left .ant-divider-inner-text, .ant-divider-horizontal.ant-divider-with-text-right .ant-divider-inner-text {
+    padding: 0 10px 0px 0px;
+}
+.ant-modal-close-x {
+    color: #ffffff70;
+}
+#calendar-holder {
+    background: #f4f8f9;
+    min-height: 100vh;
+}
+.user-profile-popover {
+    width: 200px;
+}
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:800|Open+Sans");
+.page-holder {
+    #container {
+        height: 600px;
+        width: 900px;
+        margin: 10% auto;
+        position: relative;
+    }
+    #background {
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+        width: 100%;
+        height: 100%;
+        background: #ffd000;
+        // -webkit-clip-path: polygon(52% 0, 100% 0, 100% 100%, 0% 100%);
+        // clip-path: polygon(52% 0, 100% 0, 100% 100%, 0% 100%);
+        z-index: -1;
+        transition: all .8s ease;
+    }
+
+    /* navigation */
+    nav {
+        display: block;
+        float: right;
+        margin: 1em;
+        margin-top: 2.4em;
+        font-family: "Open Sans", sans-serif;
+        font-size: 11px;
+    }
+
+    .navbar a {
+        padding: 10px;
+        margin-left: 10px;
+        border-radius: 25px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #373449;
+    }
+    .navbar a:hover {
+        background: #fff;
+        padding: 10px;
+        border-radius: 25px;
+        transition: all .5s ease;
+    }
+
+    .app-store-btns {
+        margin: 48px 0px;
+        img {
+            height: 50px;
+            margin-right: 16px;
+        }
+    }
+
+    .navbar a.active {
+        color: #373449;
+        background: #FFDC7B;
+        transition: all .5s ease;
+    }
+
+    /* sections */
+    .section {
+        position: absolute;
+        margin-top: 5%;
+        margin-left: 5%;
+        width: 100%;
+        height: 80%;
+    }
+
+    
+    /* text-styling */
+    h1 {
+        font-family: "Work Sans", sans-serif;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 3.5em;
+        font-weight: 700;
+        margin-top: 30px;
+    }
+
+    #title {
+        transition: all 1s ease;
+    }
+
+    h2 {
+        font-size: 1.2em;
+        text-transform: uppercase;
+        margin-top: -20px;
+        letter-spacing: 3px;
+        font-family: "Open Sans", sans-serif;
+        color: #373449;
+    }
+    
+
+    p {
+        font-family: "Open Sans", sans-serif;
+        font-size: .8em;
+        letter-spacing: 2px;
+        display: inline-block;
+        padding: 0 45px;
+        text-transform: uppercase;
+        color: #373449;
+    }
+
+    #about-holder {
+        margin-right: 350px;
+        margin-top: 32px;
+    }
+
+    .highlight {
+        background-color: #FFDC7B;
+    }
+
+    .margin-top {
+        margin-top: 135px;
+    }
+
+    /* image */
+    .alta img {
+        width: 300px;
+        position: absolute;
+        top: 50px;
+        right: 0px;
+        z-index: -1;
+    }
+
+    #alta img {
+        transition: all 1s ease;
+    }
+    .contact-us {
+        padding: 10px;
+        margin-top: 32px;
+        border-radius: 25px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background: #373449;
+        color: #fff;
+        display: inline-block;
+    }
+}
