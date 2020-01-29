@@ -1,4 +1,4 @@
-version: "3"
+version: "3.5"
 services:
   frontend-react:
     build:
@@ -41,7 +41,9 @@ services:
 volumes:
   node-modules:
   odoo-db-data:
+    name: "odoo-db-data-${tag}"
   odoo-web-data:
+    name: "odoo-web-data-${tag}"
 
 
 networks:
