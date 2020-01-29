@@ -20,7 +20,7 @@ services:
     depends_on:
       - db
     volumes:
-      - odoo-web-data:/var/lib/odoo
+      - "odoo-web-data:/var/lib/odoo-${tag}"
       - ./backend/config:/etc/odoo
       - ./backend/addons:/mnt/extra-addons
     environment:
@@ -32,11 +32,11 @@ services:
     restart: always
     image: rahulkathpal/postgres
     environment:
-      - POSTGRES_PASSWORD=odoo
-      - POSTGRES_USER=odoo
-      - PGDATA=/var/lib/postgresql/data/pgdata
+      - "POSTGRES_PASSWORD=odoo-${tag}"
+      - "POSTGRES_USER=odoo-${tag}"
+      - "PGDATA=/var/lib/postgresql/data/pgdata-${tag}"
     volumes:
-      - odoo-db-data:/var/lib/postgresql/data/pgdata
+      - "odoo-db-data:/var/lib/postgresql/data/pgdata-${tag}"
   
 volumes:
   node-modules:
