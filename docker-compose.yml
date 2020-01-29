@@ -1,12 +1,5 @@
 version: "3"
 services:
-  nginx-proxy-service:
-    image: jwilder/nginx-proxy
-    ports:
-      - "80:80"
-    volumes:
-      - /var/run/docker.sock:/tmp/docker.sock:ro
-
   frontend-react:
     build:
       context: ./frontend/
