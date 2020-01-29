@@ -17,7 +17,7 @@ services:
     environment:
       - NODE_ENV=development
       - CHOKIDAR_USEPOLLING=true
-      - "VIRTUAL_HOST=${tag}.react.local"
+      - "VIRTUAL_HOST=${tag}.react.connect-sx.com"
       - VIRTUAL_PORT=3000
 
 
@@ -31,7 +31,7 @@ services:
       - ./backend/config:/etc/odoo
       - ./backend/addons:/mnt/extra-addons
     environment:
-      - "VIRTUAL_HOST=${tag}.odoo.local"
+      - "VIRTUAL_HOST=${tag}.odoo.connect-sx.com"
       - VIRTUAL_PORT=8069
     
   
