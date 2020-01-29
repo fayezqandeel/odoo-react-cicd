@@ -40,8 +40,10 @@ services:
   
 volumes:
   node-modules:
-  "odoo-db-data-${tag}":
-  "odoo-web-data-${tag}":
+    odoo-db-data:
+      name: "odoo-db-data-${tag}"
+    odoo-web-data:
+      name: "odoo-web-data-${tag}"
 
 
 networks:
