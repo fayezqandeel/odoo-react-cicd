@@ -32,8 +32,8 @@ services:
     restart: always
     image: rahulkathpal/postgres
     environment:
-      - POSTGRES_PASSWORD=odoo
-      - POSTGRES_USER=odoo
+      - "POSTGRES_PASSWORD=odoo-${tag}"
+      - "POSTGRES_USER=odoo-${tag}"
       - "PGDATA=/var/lib/postgresql/data/pgdata-${tag}"
     volumes:
       - "odoo-db-data:/var/lib/postgresql/data/pgdata-${tag}"
