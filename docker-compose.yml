@@ -20,7 +20,7 @@ services:
     depends_on:
       - db
     volumes:
-      - "odoo-web-data-${tag}:/var/lib/odoo"
+      - odoo-web-data:/var/lib/odoo
       - ./backend/config:/etc/odoo
       - ./backend/addons:/mnt/extra-addons
     environment:
@@ -36,14 +36,14 @@ services:
       - POSTGRES_USER=odoo
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
-      - "odoo-db-data-${tag}:/var/lib/postgresql/data/pgdata"
+      - odoo-db-data:/var/lib/postgresql/data/pgdata
   
 volumes:
   node-modules:
   odoo-db-data:
-    name: "odoo-db-data-${tag}"
+    "name: odoo-db-data-${tag}"
   odoo-web-data:
-    name: "odoo-web-data-${tag}"
+    "name: odoo-web-data-${tag}"
 
 
 networks:
