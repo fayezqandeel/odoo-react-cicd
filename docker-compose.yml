@@ -18,7 +18,7 @@ services:
     image: odoo:12
     tty: true
     stdin_open: true
-    command: -- --dev=reload
+    command: "-- --dev=reload --db-filter=${tag}"
     volumes:
       - odoo-web-data:/var/lib/odoo
       - ./backend/config:/etc/odoo
