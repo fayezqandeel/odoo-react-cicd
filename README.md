@@ -19,8 +19,14 @@ In this repo I'm tryin to implement feature branch deployment, along with odoo/r
 <img width="1386" alt="Screen Shot 2020-01-30 at 10 42 06 PM" src="https://user-images.githubusercontent.com/991205/73494618-23622e80-43b5-11ea-82df-7680a64ba122.png">
 
 6. Create SSH remote hosts by going to jenkins configuration -> SSH remote hosts section
+<img width="1017" alt="Screen Shot 2020-01-30 at 10 46 47 PM" src="https://user-images.githubusercontent.com/991205/73494798-85229880-43b5-11ea-855e-8506e17bc1bf.png">
+
 4. Create free style Jenkins Project
 5. Configure the project and connect it to your project repo and set Branches to build to */feature/*
+<img width="941" alt="Screen Shot 2020-01-30 at 10 48 28 PM" src="https://user-images.githubusercontent.com/991205/73494848-a1263a00-43b5-11ea-9bab-dda14a013eed.png">
+<img width="910" alt="Screen Shot 2020-01-30 at 10 48 34 PM" src="https://user-images.githubusercontent.com/991205/73494884-b1d6b000-43b5-11ea-8351-d37b889f1f60.png">
+
+
 6. Add build step "Execute shell script on remote host using ssh"
 7. Paste the following bash script
 ```bash
@@ -54,8 +60,12 @@ else
 fi
 
 ```
+<img width="915" alt="Screen Shot 2020-01-30 at 10 51 04 PM" src="https://user-images.githubusercontent.com/991205/73494912-c2872600-43b5-11ea-82bb-d3f614989238.png">
+
+
 8. Save
 9. Login to your github repo settings -> webhooks-> add new webhook-> set hook Payload URL to http[s]://[JenkinsURL]/github-webhook/ and with preference Just the push event.
+<img width="1096" alt="Screen Shot 2020-01-30 at 11 11 53 PM" src="https://user-images.githubusercontent.com/991205/73494987-f19d9780-43b5-11ea-86ec-3c58fa577fff.png">
 
 10. Login to your AWS EC2 instance 
 11. install docker by running the following 
@@ -70,5 +80,11 @@ sudo docker network create nginx-proxy
 ```
 
 13. Create branch and push anything to it, please not that branch name should be in this pattern feature|hotfix|bugfix/[JIRA-TICKET-NUMBER] for example feature/LGR-675 or hotfix/LGR-754
+
+14. In you domain DNS management, create A record to forward all subdomains to AWS EC2 ip instance
+15. Navigate to, [JIRE-TICKET-NUMBER].react.[YOUR DOMAIN] to see react interface, i.e 432.react.mydomain.com
+16. Navigate to, [JIRE-TICKET-NUMBER].odoo.[YOUR DOMAIN] to see odoo interface, i.e 432.odoo.mydomain.com
+18. create new database in odoo with name [TICKET-NUMBER], i.e 432
+
 
 
