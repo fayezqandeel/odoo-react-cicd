@@ -15,9 +15,9 @@ _logger = logging.getLogger(__name__)
 class OdooAPI(http.Controller):
     @http.route(
         '/api/<string:model>', 
-        auth='none', methods=['GET'], csrf=False, cors='*')
+        auth='public', methods=['GET'], csrf=False, cors='*')
     def get_model_data(self, model, **params):
-        itemsObjects = request.env[model].search([])
+        itemsObjects = request.env[model.replace('-', '.')].sudo().search([])
         items = []
         for item in itemsObjects:
             items.append({
