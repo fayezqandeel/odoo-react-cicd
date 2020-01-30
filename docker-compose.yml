@@ -1,12 +1,5 @@
 version: "3"
 services:
-  nginx-proxy-service:
-    image: jwilder/nginx-proxy
-    ports:
-      - "80:80"
-    volumes:
-      - /var/run/docker.sock:/tmp/docker.sock:ro
-
   frontend-react:
     build:
       context: ./frontend/
@@ -17,37 +10,25 @@ services:
     environment:
       - NODE_ENV=development
       - CHOKIDAR_USEPOLLING=true
-      - "VIRTUAL_HOST=${tag}.react.local"
+      - "VIRTUAL_HOST=${tag}.react.connect-sx.com"
       - VIRTUAL_PORT=3000
-
 
   backend-odoo:
     restart: always
     image: odoo:12
-    depends_on:
-      - db
+    tty: true
+    stdin_open: true
+    command: "-- --dev=reload --db-filter=${tag}"
     volumes:
       - odoo-web-data:/var/lib/odoo
       - ./backend/config:/etc/odoo
       - ./backend/addons:/mnt/extra-addons
     environment:
-      - "VIRTUAL_HOST=${tag}.odoo.local"
+      - "VIRTUAL_HOST=${tag}.odoo.connect-sx.com"
       - VIRTUAL_PORT=8069
-    
-  
-  db:
-    restart: always
-    image: rahulkathpal/postgres
-    environment:
-      - POSTGRES_PASSWORD=odoo
-      - POSTGRES_USER=odoo
-      - PGDATA=/var/lib/postgresql/data/pgdata
-    volumes:
-      - odoo-db-data:/var/lib/postgresql/data/pgdata
   
 volumes:
   node-modules:
-  odoo-db-data:
   odoo-web-data:
 
 
