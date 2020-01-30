@@ -82,9 +82,15 @@ sudo docker network create nginx-proxy
 13. Create branch and push anything to it, please not that branch name should be in this pattern feature|hotfix|bugfix/[JIRA-TICKET-NUMBER] for example feature/LGR-675 or hotfix/LGR-754
 
 14. In you domain DNS management, create A record to forward all subdomains to AWS EC2 ip instance
-15. Navigate to, [JIRE-TICKET-NUMBER].react.[YOUR DOMAIN] to see react interface, i.e 432.react.mydomain.com
-16. Navigate to, [JIRE-TICKET-NUMBER].odoo.[YOUR DOMAIN] to see odoo interface, i.e 432.odoo.mydomain.com
-18. create new database in odoo with name [TICKET-NUMBER], i.e 432
+
+# now whenever you create new branch in github repo and push somthing it will create two subdomains
+
+15. Navigate to, [JIRE-TICKET-NUMBER].react.[YOUR DOMAIN] to see react interface, for example 432.react.mydomain.com
+16. Navigate to, [JIRE-TICKET-NUMBER].odoo.[YOUR DOMAIN] to see odoo interface, for example 432.odoo.mydomain.com
+18. create new database in odoo with name [TICKET-NUMBER], for example 432
+
+
+
 
 
 
