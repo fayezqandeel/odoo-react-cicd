@@ -17,7 +17,7 @@ class OdooAPI(http.Controller):
         '/api/<string:model>', 
         auth='public', methods=['GET'], csrf=False, cors='*')
     def get_model_data(self, model, **params):
-        itemsObjects = request.env[model].search([])
+        itemsObjects = request.env[model.replace('-', '.')].sudo().search([])
         items = []
         for item in itemsObjects:
             items.append({

@@ -13,15 +13,12 @@ services:
       - "VIRTUAL_HOST=${tag}.react.connect-sx.com"
       - VIRTUAL_PORT=3000
 
-
   backend-odoo:
     restart: always
     image: odoo:12
     tty: true
     stdin_open: true
     command: -- --dev=reload
-    depends_on:
-      - db
     volumes:
       - odoo-web-data:/var/lib/odoo
       - ./backend/config:/etc/odoo
@@ -29,15 +26,6 @@ services:
     environment:
       - "VIRTUAL_HOST=${tag}.odoo.connect-sx.com"
       - VIRTUAL_PORT=8069
-    
-  
-  db:
-    restart: always
-    image: postgres:10
-    environment:
-      - POSTGRES_PASSWORD=odoo
-      - POSTGRES_USER=odoo
-      - POSTGRES_DB=postgres
   
 volumes:
   node-modules:
