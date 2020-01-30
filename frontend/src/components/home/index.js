@@ -30,7 +30,7 @@ const Home = (props) => {
 
   return (
     <div id="homepage">
-      <h2>Welcome to odoo-react integration - Second Branch ....</h2>
+      <h2>Welcome to odoo-react integration - feature/LGR-866 Branch ....</h2>
       <p>List of pages fetched from odoo instance</p>
       <Spin tip="Loading..." spinning={loading}>
         <Table bordered dataSource={pages} columns={columns} />
