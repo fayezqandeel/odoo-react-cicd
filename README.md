@@ -16,6 +16,8 @@ In this repo I'm tryin to implement feature branch deployment, along with odoo/r
 2. Install these plugins for jenkins [SSH2 Easy Plugin, SSH Agent, Github plugin]
 3. Add you Amazon EC2 credentials by going to jenkins -> credentials -> Stores scoped -> Add Credentials
 4. Kind of credentials should be SSH Username with private key
+<img width="1386" alt="Screen Shot 2020-01-30 at 10 42 06 PM" src="https://user-images.githubusercontent.com/991205/73494618-23622e80-43b5-11ea-82df-7680a64ba122.png">
+
 6. Create SSH remote hosts by going to jenkins configuration -> SSH remote hosts section
 4. Create free style Jenkins Project
 5. Configure the project and connect it to your project repo and set Branches to build to */feature/*
