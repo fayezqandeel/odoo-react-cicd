@@ -1,4 +1,4 @@
-version: "3.5"
+version: "3"
 services:
   frontend-react:
     build:
@@ -17,10 +17,13 @@ services:
   backend-odoo:
     restart: always
     image: odoo:12
+    tty: true
+    stdin_open: true
+    command: -- --dev=reload
     depends_on:
       - db
     volumes:
-      - "odoo-web-data:/var/lib/odoo-${tag}"
+      - odoo-web-data:/var/lib/odoo
       - ./backend/config:/etc/odoo
       - ./backend/addons:/mnt/extra-addons
     environment:
@@ -30,20 +33,15 @@ services:
   
   db:
     restart: always
-    image: rahulkathpal/postgres
+    image: postgres:10
     environment:
-      - "POSTGRES_PASSWORD=odoo-${tag}"
-      - "POSTGRES_USER=odoo-${tag}"
-      - "PGDATA=/var/lib/postgresql/data/pgdata-${tag}"
-    volumes:
-      - "odoo-db-data:/var/lib/postgresql/data/pgdata-${tag}"
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+      - POSTGRES_DB=postgres
   
 volumes:
   node-modules:
-  odoo-db-data:
-    name: "odoo-db-data-${tag}"
   odoo-web-data:
-    name: "odoo-web-data-${tag}"
 
 
 networks:
