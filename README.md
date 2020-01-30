@@ -83,7 +83,7 @@ sudo docker network create nginx-proxy
 
 14. In you domain DNS management, create A record to forward all subdomains to AWS EC2 ip instance
 
-# now whenever you create new branch in github repo and push somthing it will create two subdomains
+### now whenever you create new branch in github repo and push somthing it will create two subdomains
 
 15. Navigate to, [JIRE-TICKET-NUMBER].react.[YOUR DOMAIN] to see react interface, for example 432.react.mydomain.com
 16. Navigate to, [JIRE-TICKET-NUMBER].odoo.[YOUR DOMAIN] to see odoo interface, for example 432.odoo.mydomain.com
