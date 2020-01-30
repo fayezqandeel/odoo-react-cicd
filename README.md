@@ -26,7 +26,7 @@ In this repo I'm tryin to implement feature branch deployment, along with odoo/r
 branch=$(echo "$GIT_BRANCH" | sed 's/origin\///g')
 tag=$(echo "$GIT_BRANCH" | sed 's/[^0-9]*//g')
 echo "branch=$branch, tag=$tag"
-git clone  -b $branch https://[GITHUB USERNAME]:[GITHUB PASSWORD]@github.com/[GITHUB REPO URL] $tag
+git clone  -b $branch https://[GITHUB USERNAME]:[GITHUB PASSWORD]@github.com/[GITHUB REPO PATH URL] $tag
 if [ $? -eq 0 ]; then
     cd $tag
     sudo touch .env
