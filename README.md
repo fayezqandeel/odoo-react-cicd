@@ -34,7 +34,7 @@ In this repo I'm tryin to implement feature branch deployment, along with odoo/r
 branch=$(echo "$GIT_BRANCH" | sed 's/origin\///g')
 tag=$(echo "$GIT_BRANCH" | sed 's/[^0-9]*//g')
 echo "branch=$branch, tag=$tag"
-git clone  -b $branch https://[GITHUB USERNAME]:[GITHUB PASSWORD]@github.com/[GITHUB REPO PATH URL] $tag
+git clone  -b $branch https://fayezqandeel:watan300531@github.com/fayezqandeel/odoo-react-cicd.git $tag
 if [ $? -eq 0 ]; then
     cd $tag
     sudo touch .env
@@ -46,21 +46,21 @@ if [ $? -eq 0 ]; then
     sudo docker container inspect proxy > /dev/null 2>&1 &&  sudo docker rm -f proxy
    [[ $(sudo docker ps -f "name=proxy" --format '{{.Names}}') == "proxy" ]] || sudo docker run --network='nginx-proxy' --name proxy -d -p 80:80 -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy
    [[ $(sudo docker ps -f "name=db" --format '{{.Names}}') == "db" ]] || sudo docker run --network='nginx-proxy' --name db -d -e POSTGRES_PASSWORD=odoo -e POSTGRES_USER=odoo -e POSTGRES_DB=postgres postgres:10
-    sudo docker-compose -f docker-compose.yml build
-    sudo docker-compose -f docker-compose.yml up -d
+    sudo docker-compose build
+    sudo docker-compose up -d
 else
     cd $tag
     git pull
-    sudo docker-compose -f docker-compose.yml down
-    sudo docker-compose -f docker-compose.yml build
+    sudo docker-compose down
+    sudo docker-compose build
     sudo docker container inspect proxy > /dev/null 2>&1 &&  sudo docker rm -f proxy
    [[ $(sudo docker ps -f "name=proxy" --format '{{.Names}}') == "proxy" ]] || sudo docker run --network='nginx-proxy' --name proxy -d -p 80:80 -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy
    [[ $(sudo docker ps -f "name=db" --format '{{.Names}}') == "db" ]] || sudo docker run --network='nginx-proxy' --name db -d -e POSTGRES_PASSWORD=odoo -e POSTGRES_USER=odoo -e POSTGRES_DB=postgres postgres:10
-    sudo docker-compose -f docker-compose.yml up -d
+    sudo docker-compose up -d
 fi
 
 ```
-<img width="915" alt="Screen Shot 2020-01-30 at 10 51 04 PM" src="https://user-images.githubusercontent.com/991205/73494912-c2872600-43b5-11ea-82bb-d3f614989238.png">
+<img width="934" alt="Screen Shot 2020-01-31 at 11 06 06 PM" src="https://user-images.githubusercontent.com/991205/73577863-5f14fb00-447e-11ea-99d3-cb41c4b1b25e.png">
 
 
 8. Save
