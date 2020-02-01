@@ -25,7 +25,6 @@ In this repo I'm tryin to implement feature branch deployment, along with odoo/r
 
 4. Create free style Jenkins Project
 5. Configure the project and connect it to your project repo and set Branches to build to */feature/*
-<img width="941" alt="Screen Shot 2020-01-30 at 10 48 28 PM" src="https://user-images.githubusercontent.com/991205/73494848-a1263a00-43b5-11ea-9bab-dda14a013eed.png">
 <img width="910" alt="Screen Shot 2020-01-30 at 10 48 34 PM" src="https://user-images.githubusercontent.com/991205/73494884-b1d6b000-43b5-11ea-8351-d37b889f1f60.png">
 
 
