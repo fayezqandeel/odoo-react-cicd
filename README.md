@@ -36,7 +36,7 @@ In this repo I'm tryin to implement feature branch deployment, along with odoo/r
 branch=$(echo "$GIT_BRANCH" | sed 's/origin\///g')
 tag=$(echo "$GIT_BRANCH" | sed 's/[^0-9]*//g')
 echo "branch=$branch, tag=$tag"
-git clone  https://[YOUR GITHUB AUTH]@github.com/fayezqandeel/odoo-react-cicd.git $tag
+git clone  https://[YOUR GITHUB AUTH]@github.com/[YOUR GITHUB REPO PATH URL] $tag
 if [ $? -eq 0 ]; then
     cd $tag
     sudo touch .env
