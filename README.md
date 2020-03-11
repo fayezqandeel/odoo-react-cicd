@@ -61,8 +61,6 @@ else
 fi
 
 ```
-<img width="934" alt="Screen Shot 2020-01-31 at 11 06 06 PM" src="https://user-images.githubusercontent.com/991205/73577863-5f14fb00-447e-11ea-99d3-cb41c4b1b25e.png">
-
 
 8. Save
 9. Login to your github repo settings -> webhooks-> add new webhook-> set hook Payload URL to http[s]://[JenkinsURL]/github-webhook/ and with preference Just the push event.
