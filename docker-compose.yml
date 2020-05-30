@@ -10,7 +10,7 @@ services:
     environment:
       - NODE_ENV=development
       - CHOKIDAR_USEPOLLING=true
-      - "VIRTUAL_HOST=172.18.0.3"
+      - "VIRTUAL_HOST=${tag}.react.connect-sx.com"
       - VIRTUAL_PORT=3000
 
   backend-odoo:
