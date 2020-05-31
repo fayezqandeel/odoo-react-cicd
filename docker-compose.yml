@@ -6,7 +6,7 @@ services:
     command: npm start
     volumes:
       - ./frontend/:/usr/app
-      - /usr/app/node_modules:rw
+      - /usr/app/node_modules
     environment:
       - NODE_ENV=development
       - CHOKIDAR_USEPOLLING=true
