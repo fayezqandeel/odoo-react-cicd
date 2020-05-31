@@ -5,7 +5,7 @@ services:
       context: ./frontend/
     command: npm start
     volumes:
-      - ./frontend/:/usr/app:rw
+      - ./frontend/:/usr/app
       - /usr/app/node_modules:rw
     environment:
       - NODE_ENV=development
@@ -19,9 +19,9 @@ services:
     stdin_open: true
     command: -- --dev=reload
     volumes:
-      - odoo-web-data:/var/lib/odoo:rw
-      - ./backend/config:/etc/odoo:rw
-      - ./backend/addons:/mnt/extra-addons:rw
+      - odoo-web-data:/var/lib/odoo
+      - ./backend/config:/etc/odoo
+      - ./backend/addons:/mnt/extra-addons
     environment:
       - "VIRTUAL_HOST=${tag}"
       - VIRTUAL_PORT=8069  
