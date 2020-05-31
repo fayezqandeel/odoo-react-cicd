@@ -17,13 +17,13 @@ services:
     restart: always
     image: odoo:12    
     stdin_open: true
-    command: "-- --dev=reload --db-filter=.*"
+    command: "-- --dev=reload --db-filter=${tag}"
     volumes:
       - odoo-web-data:/var/lib/odoo
       - ./backend/config:/etc/odoo
       - ./backend/addons:/mnt/extra-addons
     environment:
-      - "VIRTUAL_HOST=172.18.0.4"
+      - "VIRTUAL_HOST=${tag}"
       - VIRTUAL_PORT=8069
   
 volumes:
