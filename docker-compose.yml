@@ -24,7 +24,7 @@ services:
       - ./backend/config:/etc/odoo
       - ./backend/addons:/mnt/extra-addons
     environment:
-      - "VIRTUAL_HOST=${tag}.odoo.connect-sx.com"
+      - "VIRTUAL_HOST=${tag}"
       - VIRTUAL_PORT=8069
   
 volumes:
