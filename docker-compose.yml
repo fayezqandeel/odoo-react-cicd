@@ -5,8 +5,8 @@ services:
       context: ./frontend/
     command: npm start
     volumes:
-      - ./frontend/:/usr/app
-      - /usr/app/node_modules
+      - ./frontend/:/usr/app:rw
+      - /usr/app/node_modules:rw
     environment:
       - NODE_ENV=development
       - CHOKIDAR_USEPOLLING=true
@@ -17,11 +17,11 @@ services:
     restart: always
     image: odoo:12    
     stdin_open: true
-    command: "-- --dev=reload --db-filter=${tag}"
+    command: -- --dev=reload
     volumes:
-      - odoo-web-data:/var/lib/odoo
-      - ./backend/config:/etc/odoo
-      - ./backend/addons:/mnt/extra-addons
+      - odoo-web-data:/var/lib/odoo:rw
+      - ./backend/config:/etc/odoo:rw
+      - ./backend/addons:/mnt/extra-addons:rw
     environment:
       - "VIRTUAL_HOST=${tag}"
       - VIRTUAL_PORT=8069  
