@@ -15,19 +15,22 @@ services:
 
   backend-odoo:
     restart: always
-    image: odoo:12    
+    image: odoo:12
+    tty: true
     stdin_open: true
-    command: -- --dev=reload
+    command: "-- --dev=reload --db-filter=db"
     volumes:
       - odoo-web-data:/var/lib/odoo
       - ./backend/config:/etc/odoo
       - ./backend/addons:/mnt/extra-addons
     environment:
-      - "VIRTUAL_HOST=${tag}"
-      - VIRTUAL_PORT=8069  
+      - "VIRTUAL_HOST=${tag}.odoo.connect-sx.com"
+      - VIRTUAL_PORT=8069
+  
 volumes:
   node-modules:
   odoo-web-data:
+
 
 networks:
   default:
