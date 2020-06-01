@@ -15,8 +15,7 @@ services:
 
   backend-odoo:
     restart: always
-    image: odoo:12
-    tty: true
+    image: odoo:12  
     stdin_open: true
     command: "-- --dev=reload --db-filter=${tag}"
     volumes:
