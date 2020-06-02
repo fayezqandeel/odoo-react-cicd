@@ -6,7 +6,7 @@
     "version": "12.0.1.0.0",
     "category": "Sales",
     "website": "https://github.com/OCA/account-invoicing",
-    "author": "Camptocamp, Odoo Community Association (OCA)",
+    "author": "Jaballi Maher,OCA)",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
